@@ -150,9 +150,17 @@ function updateForecastItems(weatherData) {
         main: {temp}
     } = weatherData ;
 
+    const dateTaken = new Date(date);
+    const dateReq = {
+        day : "2-digit",
+        month : "short"
+    }
+
+    const dateResult = dateTaken.toLocaleDateString("en-US",dateReq);
+
     const forecastItem = `
             <div class="forecastItem">
-                <h5 class="forecastDate">12 Mar </h5>
+                <h5 class="forecastDate">${dateResult} </h5>
                 <img src="assets/${getEmoji(id)}" class="forecastEmoji"></img>
                 <h4 class="forecastTemp">${Math.round(temp)} <sup style="font-size: 10px;">o</sup>C</h4>
             </div>
