@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+/*-----------------BACKGROUND-----------------------*/
+body{
+    background: url(assets/background.webp);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+body::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100dvh;
+    background-position: center;
+    background-size: cover;
+    background-color: rgb(0,0,0,0.15);
+    backdrop-filter: blur(10px);
+    
+}
+
+
+
+.mainBox{
+    height: 480px;
+    width: 250px;
+    border-radius: 15px;
+    background: linear-gradient(to top,rgb(0,0,0,0.15),rgb(255,255,255,0.15));
+    backdrop-filter: blur(50px);
+    padding: 20px ;
+    padding-right: 55px;
+    position: relative;
+}
+
+/*-----------------INPUT BOX START--------------------*/
+.input-Box{
+    position: relative;
+}
+#cityInput{
+    outline: none;
+    border: solid 3px transparent;
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 99px;
+    background: rgb(0,0,0,0.15);
+    transition: 0.25s border;
+    font-weight: 500;
+    margin-right: 50px;
+    
+}
+#cityInput:focus{
+    border: solid 3px rgb(0,0,0,0.15);
+
+}
+#cityInput::placeholder{
+    color: rgb(255,255,255,0.75);
+}
+#searchBTN{
+    position: absolute;
+    right: -8%;
+    transform: translateY(-117% );
+    background: none;
+    border: none ;
+    cursor: pointer;
+}
+/*---------------Input box end------------------*/
+
+
+
+/*---------------Location And Date Box Start -------------*/
+.location-date-box{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin-top: 15px;
+    margin-right: -30px;
+    align-items: baseline;
+}
+.date{
+    justify-self: right;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+#cityName{
+    font-size: 16px;
+}
+/*---------------Location and Date Box End -----------------*/
+/*----------------StatusBox---------------*/
+.statusBox{
+    display: flex;
+    margin-right: -30px;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+#emojiBox{
+    background-image: url(assets/clearsky.webp);
+    height: 150px;
+    width: 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#tempBox{
+    font-size: 40px;
+    padding-top: 10px;
+    text-align: right;
+    font-weight: 500;
+}
+#statusValue{
+    
+    text-align: right;
+    font-size: 23px;
+}
+div{
+    justify-content: center;
+    align-items: center;
+}
+sup{
+    font-size: 25px;
+}
+
+.humidity-windspeed{
+    display: flex;
+    justify-content: space-between;
+    margin-right: -35px;
+    margin-left: -12px;
+
+}
+.HWbox{
+    display: flex;
+    width: 150px;
+    padding-top: 20px;
+    ;
+}
+
+.iconBox{
+    font-size: 25px;
+    padding-right: 10px;
+}
+.head{
+    width: 150px;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+/*------------FORECAST BOX---------*/
+
+.forecastItem{
+    background-color: rgb(0,0,0,0.15);
+    min-width: 56px;
+    padding: 5px;
+    
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    position: relative;
+    gap: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.forecastEmoji{
+    
+    height: 35px;
+    width: 35px;
+    
+
+}
+.forecastBox{
+    display: flex;
+    overflow-x: scroll;
+    padding-top: 20px;
+    gap: 10px;
+    margin-right: -45px;
+    padding-bottom: 12px;
+    margin-left: -0px;
+    padding-left: 75px;
+
+}
+.forecastBox::-webkit-scrollbar{
+    height: 8px;
+}
+.forecastBox::-webkit-scrollbar-track{
+    background-color: rgb(0,0,0,0.1);
+
+}
+.forecastBox::-webkit-scrollbar-thumb{
+    background-color: rgb(0,0,0,0.15);
+    border-radius: 50%;
+}
+h4{
+    font-weight: 500;
+}
+
+
+/**---------Search Section --------------*/
+
+.sectionPNG{
+    height: 180px;
+    width: fit-content;
+    padding-top: 50px;
+}
+.searchScreen{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    display:flex;
+    position: relative;
+    padding-left: 30px;
+}
+
+.searchScreen h5{
+    font-weight: 400;
+}
+/*------ ERROR SCREEN ------*/
+.errorScreen{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-left: 30px;
+    display: none;
+    position: relative;
+}
+
+.errorScreen h5{
+    font-weight: 400;
+}
+/*---------*/
+#infoBox{
+    display: flex;
+    width: 250px;
+    position: relative;
+    flex-direction: column;
+}
+
+
+
+main.error{
+    animation: errorVibrate 0.3s linear 1 ;
+}
+@keyframes errorVibrate{
+    0%{
+        transform: translate(10px , 5px);
+    }
+    25%{
+        transform: translate(0px , -8px);
+    }
+    50%{
+        transform: translate(2px , 8px);
+    }
+    75%{
+        transform: translate(-10px , -5px);
+    }
+    100%{
+        transform: translate(0,0);
+    }
+}
